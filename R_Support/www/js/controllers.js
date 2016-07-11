@@ -227,7 +227,7 @@ angular.module('app.controllers', [])
         $ionicHistory.goBack(-2);
     }
 })
-.controller('signupsuccessCtrl', function($scope, $ionicHistory) {
+.controller('signupsuccessCtrl', function($scope, $state, $ionicHistory) {
     $scope.onClickedFinishButton = function() {
         $state.go('phanPhucLac.new');
     }
@@ -282,7 +282,7 @@ angular.module('app.controllers', [])
             .success(function(data, status, headers, config) {
                 //alert("SUCCESS: data= "+JSON.stringify(data)+" status="+status+" config="+JSON.stringify(config));
                 //SharedDataFactory.question = data;
-                $scope.answers[$scope.answers.length] = {"id":data.id, "content":data.content};
+                $scope.answers[$scope.answers.length] = {"id":data.id, "content":data.content, "replies":[]};
             })
             .error(function(data, status, headers, config) {
                 alert("ERROR: data= "+JSON.stringify(data)+" status="+status+" config="+JSON.stringify(config));
