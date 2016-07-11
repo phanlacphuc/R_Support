@@ -1,0 +1,86 @@
+<ion-view title="質問詳細" hide-nav-bar="true" id="page24" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div class="">
+            <img src="img/K5q9vEZ8Q4WExCaptZhU_icon_long.png" width="200" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div>
+            <div class="list">
+                <li class="row">
+                    <div class="col col-20">
+                        <div class="row" ng-click="onClickedUpVote()">
+                            {{question.upvote}}
+                            <img src="img/up.jpg" alt="アップ" width="40" height="40">
+
+                        </div>
+                        <div class="row" ng-click="onClickedDownVote()">
+                            {{question.downvote}}
+                            <img src="img/down.jpg" alt="ダウン" width="40" height="40">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <font color="#0000ff">
+                                {{question.title}}</font>
+                        </div>
+                        <div class="row" ng-bind-html="question.info">
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+        <div style="margin-right:-20px;">
+            <button id="page24-button14" style="left:-10px;text-align:left;" class=" button button-dark button-small button-full ">回答</button>
+        </div>
+        <div ng-repeat="answer in answers">
+            <p>
+                <font color="#0000ff">{{answer.content}}</font>
+            </p>
+            <li class="row" >
+            <div class="col col-20">
+                <p>　</p>
+            </div>
+            <div class="col">
+
+            <div ng-repeat="reply in answer.replies">
+                <p>
+                    {{reply.content}}
+                </p>
+            </div>
+            <p>
+                <a href="#">この回答に返信</a>
+            </p>
+            <form id="page24-form34" class="list ">
+                <label class="item item-input " id="page24-textarea5">
+                    <span class="input-label"></span><textarea placeholder="返信内容" ng-model="reply.content"></textarea>
+                </label>
+            </form>
+            <div>
+                <p align="right">
+                    <button ng-click="onClickedSendReplyToAnswerButton(answer, reply)">返信</button>
+                </p>
+            </div>
+            </div>
+            </li>
+        </div>
+
+
+        <div>
+
+            <p>
+                <a href="#">コメント・回答の追加</a>
+            </p>
+        </div>
+        <form id="page24-form33" class="list ">
+            <label class="item item-input " id="page24-textarea4">
+                <span class="input-label"></span><textarea placeholder="コメント・回答" ng-model="answer.content"></textarea>
+            </label>
+        </form>
+        <div>
+            <p align="right">
+                <button ng-click="onClickedSendAnswerButton()">送信</button>
+            </p>
+        </div>
+    </ion-content>
+</ion-view>

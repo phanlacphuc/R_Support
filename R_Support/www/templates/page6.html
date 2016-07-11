@@ -1,0 +1,22 @@
+<ion-view title="ログイン" hide-nav-bar="true" id="page6" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 74px;"></div>
+        <div class="">
+            <img src="img/EcJkSaXsTI6Xg9P0Dtk7_icon.jpg" width="100" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="spacer" style="width: 300px; height: 19px;"></div>
+        <form id="page6-form1" class="list ">
+            <ion-list id="page6-list1" class=" ">
+                <label class="item item-input " id="page6-input1">
+                    <input type="text" placeholder="ユーザ名" ng-model="loginData.username">
+                </label>
+                <label class="item item-input " id="page6-input2">
+                    <input type="password" placeholder="パスワード" ng-model="loginData.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 28px;"></div>
+            <a id="page6-button1" class=" button button-balanced  button-block " ng-click="doLogin()" >ログイン</a>
+            <a ui-sref="signup" id="page6-button2" class=" button button-positive  button-block button-clear ">アカウントを作成</a>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view title="プロフィール" hide-nav-bar="true" id="page23" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div style="margin-right:-20px;">
+            <button id="page23-button7" style="left:-10px;" class=" button button-positive  button-full ">プロフィール画面</button>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col col-25">
+                    ユーザ名
+                    <br>生年月日
+                    <br>回生
+                    <br>学部
+                    <br>登録メール
+                    <br>
+                </div>
+
+                <div class="col" ng-bind-html="user.info">
+                </div>
+            </div>
+        </div>
+        <a ui-sref="phanPhucLac.page8" id="page23-button8" style="text-align:right;" class=" button button-positive  button-block button-clear ">編集</a>
+        <div style="margin-right:-20px;">
+            <button id="page23-button9" style="left:-10px;" class=" button button-positive  button-full ">ヒストリー</button>
+        </div>
+        <div>
+            <div class="list" ui-sref="page24" ng-repeat="question in questions">
+                <li class="row">
+                    <div class="col col-20">
+                        <div class="row">
+                            {{question.upvote}}
+                            <img src="img/up.jpg" alt="アップ" width="40" height="40">
+
+                        </div>
+                        <div class="row">
+                            {{question.downvote}}
+                            <img src="img/down.jpg" alt="ダウン" width="40" height="40">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <font color="#0000ff">{{question.title}}</font>
+                        </div>
+                        <div class="row" ng-bind-html="question.info">
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

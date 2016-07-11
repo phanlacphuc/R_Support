@@ -1,0 +1,47 @@
+<ion-view title="アカウントを作成" hide-nav-bar="true" id="page8" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div class="">
+            <img src="img/K5q9vEZ8Q4WExCaptZhU_icon_long.png" width="200" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <form id="page8-form2" class="list ">
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+            <ion-list id="page8-list11" class=" ">
+                <label class="item item-input " id="page8-input8">
+                    <span class="input-label">氏名</span>
+                    <input type="text" placeholder="山田" ng-model="user.full_name">
+                </label>
+            </ion-list>
+            <label class="item item-input " id="page8-input9">
+                <span class="input-label">生年月日</span>
+                <input type="date" placeholder="" ng-model="user.birth">
+            </label>
+            <label class="item item-input " id="page8-input10">
+                <span class="input-label">回生</span>
+                <input type="number" placeholder="1" ng-model="user.grade">
+            </label>
+            <label class="item item-select " id="page8-select1">
+                <span class="input-label">所属</span>
+                <select ng-model="user.school">
+                    <option>法学部</option>
+                    <option>産業社会学部</option>
+                    <option>国際関係学部</option>
+                    <option>国際インスティテュート</option>
+                    <option>文学部</option>
+                    <option>映像学部</option>
+                    <option>経済学部</option>
+                    <option>スポーツ健康科学部</option>
+                    <option>理工学部</option>
+                    <option>情報理工学部</option>
+                    <option>文理総合インスティテュート</option>
+                    <option>生命科学部</option>
+                    <option>薬学部</option>
+                    <option>経営学部</option>
+                    <option>政策科学部</option>
+                    <option>総合心理学部</option>
+                </select>
+            </label>
+            <a id="page8-button3" class=" button button-positive  button-block " ng-click="putNewUser()">登録</a>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view title="新規投稿" hide-nav-bar="true" id="page25" class=" ">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div class="">
+            <img src="img/K5q9vEZ8Q4WExCaptZhU_icon_long.png" width="200" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <form id="page25-form35" class="list ">
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+            <label class="item item-select " id="page25-select15" name="カテゴリ">
+                <span class="input-label">カテゴリ</span>
+                <select ng-model="question.category">
+                    <option>研究</option>
+                    <option>サークル</option>
+                    <option>イベント</option>
+                    <option>学内サポート</option>
+                </select>
+            </label>
+            <label class="item item-input " id="page25-textarea6" name="質問内容">
+                <span class="input-label"></span><textarea placeholder="質問内容" ng-model="question.description"></textarea>
+            </label>
+            <div class="spacer" style="width: 300px; height: 147px;"></div>
+            <a id="page25-button15" class=" button button-positive  button-block " ng-click="postNewQuestion()">投稿</a>
+        </form>
+    </ion-content>
+</ion-view>

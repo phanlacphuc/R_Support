@@ -1,0 +1,29 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21">
+        <ion-header-bar class="bar-dark">
+            <div class="title" ng-bind-html="user.full_name"></div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header" style="background: url(img/lwUizK7T2qxjWW6DwNvw_side_menu_background.png) no-repeat center;">
+            <ion-list id="phanPhucLac-list2" class=" ">
+                <ion-item id="phanPhucLac-list-item1" ui-sref="phanPhucLac.new" menu-close="" class="  ">New</ion-item>
+                <ion-item id="phanPhucLac-list-item2" ui-sref="phanPhucLac.page10" menu-close="" class="  ">研究</ion-item>
+                <ion-item id="phanPhucLac-list-item3" ui-sref="phanPhucLac.page11" menu-close="" class="  ">サークル</ion-item>
+                <ion-item id="phanPhucLac-list-item4" ui-sref="phanPhucLac.page12" menu-close="" class="  ">イベント</ion-item>
+                <ion-item id="phanPhucLac-list-item5" ui-sref="phanPhucLac.page13" menu-close="" class="  ">学内サポート</ion-item>
+            </ion-list>
+            <div class="spacer" style="width: 268px; height: 68px;"></div>
+            <ion-list id="phanPhucLac-list6" class=" ">
+                <ion-item id="phanPhucLac-list-item8" ui-sref="phanPhucLac.page23" menu-close="" class="  ">プロフィール</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
